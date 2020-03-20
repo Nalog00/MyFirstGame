@@ -1,13 +1,10 @@
 package com.example.myfirstgame
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_game_over.*
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_start.*
 import kotlin.random.Random
-
-class start : AppCompatActivity() {
-
+class PlayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
@@ -20,7 +17,6 @@ class start : AppCompatActivity() {
                     multiply()
                 }
             }
-
     }
         fun plus() {
             var a = Random.nextInt(0, 99)
@@ -38,23 +34,23 @@ class start : AppCompatActivity() {
             btn3.text = d.toString()
             btn4.text = c.toString()
             btn1.setOnClickListener {
-                val NextLevel = Intent(this, start::class.java)
-                startActivity(NextLevel)
+                val nextLevel = Intent(this, PlayActivity::class.java)
+                startActivity(nextLevel)
             }
             btn2.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
             }
             btn3.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
             }
             btn4.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
             }
             }
 
@@ -74,23 +70,23 @@ class start : AppCompatActivity() {
             btn3.text = c.toString()
             btn4.text = d.toString()
             btn2.setOnClickListener {
-                val NextLevel = Intent(this, start::class.java)
-                startActivity(NextLevel)
+                val nextLevel = Intent(this, PlayActivity::class.java)
+                startActivity(nextLevel)
             }
             btn1.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
             }
             btn3.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
             }
             btn4.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
             }
             }
 
@@ -110,23 +106,23 @@ class start : AppCompatActivity() {
             btn2.text = e.toString()
             btn4.text = c.toString()
             btn3.setOnClickListener {
-                val NextLevel = Intent(this, start::class.java)
-                startActivity(NextLevel)
-            }
-            btn2.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
+                val nextLevel = Intent(this, PlayActivity::class.java)
+                startActivity(nextLevel)
             }
             btn1.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
+            }
+            btn3.setOnClickListener {
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
             }
             btn4.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
             }
         }
 
@@ -146,23 +142,23 @@ class start : AppCompatActivity() {
             btn3.text = c.toString()
             btn2.text = e.toString()
             btn4.setOnClickListener {
-                val NextLevel = Intent(this, start::class.java)
-                startActivity(NextLevel)
-            }
-            btn2.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
-            }
-            btn3.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
+                val nextLevel = Intent(this, PlayActivity::class.java)
+                startActivity(nextLevel)
             }
             btn1.setOnClickListener {
-                val GameOver= Intent(this, GameOver::class.java )
-                GameOver.putExtra("GameOver","GAME OVER")
-                startActivity(GameOver)
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
+            }
+            btn3.setOnClickListener {
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
+            }
+            btn4.setOnClickListener {
+                val gameOver= Intent(this, GameOver::class.java )
+                gameOver.putExtra("gameOver","GAME OVER")
+                startActivity(gameOver)
             }
         }
     }

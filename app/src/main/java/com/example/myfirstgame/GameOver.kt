@@ -9,6 +9,6 @@ class GameOver : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_over)
-        tvGO.text = intent.getStringExtra("GameOver").toString()
+        tvGO.text = intent.getStringExtra("gameOver").toString()
     }
 }

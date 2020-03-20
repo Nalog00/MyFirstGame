@@ -11,8 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btnStart.setOnClickListener {
-        val NextList = Intent(this, start:: class.java )
-            startActivity(NextList)
+        val nextList = Intent(this, PlayActivity:: class.java )
+            startActivity(nextList)
         }
         btnExit.setOnClickListener {
             finish()
