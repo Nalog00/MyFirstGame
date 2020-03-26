@@ -5,53 +5,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PlayActivity">
+
     <TextView
-        android:gravity="center"
         android:id="@+id/tv"
         android:layout_width="300dp"
         android:layout_height="100dp"
+        android:layout_marginTop="32dp"
         android:background="#ff5448"
+        android:gravity="center"
         android:textSize="32sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="32dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btn1"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:background="#76ff03"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
-        android:layout_marginStart="64dp"/>
+        android:background="#76ff03"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv" />
+
     <Button
         android:id="@+id/btn2"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:background="#ffff00"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="64dp"/>
+        android:layout_marginEnd="64dp"
+        android:background="#ffff00"
+        android:onClick="onClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv" />
+
     <Button
         android:id="@+id/btn3"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:background="#304ffe"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn1"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
-        android:layout_marginStart="64dp"/>
+        android:background="#304ffe"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn1" />
+
     <Button
         android:id="@+id/btn4"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:background="#ffab40"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn2"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="64dp"/>
+        android:layout_marginEnd="64dp"
+        android:background="#ffab40"
+        android:onClick="onClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn2" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
