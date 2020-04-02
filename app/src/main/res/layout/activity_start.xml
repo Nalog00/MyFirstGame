@@ -4,61 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlayActivity">
+    tools:context=".PlayActivity"
+    android:background="#524a00">
+
+    <TextView
+        android:id="@+id/Level"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Level: 1"
+        android:textColor="#607d8c"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv"
         android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="32dp"
-        android:background="#ff5448"
+        android:layout_height="150dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/lev"
         android:gravity="center"
         android:textSize="32sp"
+        android:textColor="#b2ff59"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn1"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="64dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:textColor="#ffff00"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:background="#76ff03"
+        android:background="@drawable/answer"
         android:onClick="onClick"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv" />
 
     <Button
         android:id="@+id/btn2"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="64dp"
-        android:background="#ffff00"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/answer"
         android:onClick="onClick"
+        android:textColor="#18ffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv" />
 
     <Button
         android:id="@+id/btn3"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="64dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:background="#304ffe"
+        android:background="@drawable/answer"
         android:onClick="onClick"
+        android:textColor="#ffab40"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn1" />
 
     <Button
         android:id="@+id/btn4"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="64dp"
-        android:background="#ffab40"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/answer"
         android:onClick="onClick"
+        android:textColor="#ff3d00"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn2" />
 

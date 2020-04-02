@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main1"
     tools:context=".MainActivity">
 
     <Button
@@ -11,10 +12,11 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/stbt1"
         android:text="Start"
-        android:textColor="#ff1483"
-        android:textSize="32dp"
+        android:textColor="#ffffff"
+        android:textSize="32sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@id/btnExit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,10 +26,12 @@
         android:id="@+id/btnExit"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/exit1"
         android:text="Exit"
-        android:textColor="#ff1483"
+        android:textColor="#FFFFFF"
         android:textSize="32sp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnStart" />

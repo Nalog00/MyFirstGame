@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         btnStart.setOnClickListener {
             val nextList = Intent(this, PlayActivity::class.java)
             startActivity(nextList)
+            finish()
         }
         btnExit.setOnClickListener {
             finish()
