@@ -1,7 +1,7 @@
 package com.example.myfirstgame
-
 import android.content.Intent
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -9,13 +9,35 @@ import kotlinx.android.synthetic.main.activity_start.*
 import kotlin.random.Random
 
 class PlayActivity : AppCompatActivity() {
-    var countOfQuestion = 10
     var score = 1
     var res = 0
+    var rightAnswer=0
+    companion object{
+        const val COUNT_OF_QUESTION = 10
+        const val RIGHT_ANSWERS_COUNT= "rightAnswersCount"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
         plus()
+        timer.start()
+    }
+    private val timer = object: CountDownTimer(15000,1000){
+        override fun onFinish() {
+            val gameOver = Intent(this@PlayActivity, GameOver::class.java)
+            gameOver.putExtra(RIGHT_ANSWERS_COUNT,rightAnswer)
+            startActivity(gameOver)
+            finish()
+        }
+        override fun onTick(mUF: Long) {
+            tvTimer.setText("" +mUF/1000).toString()
+        }
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        timer.cancel()
     }
 
     fun plus() {
@@ -68,22 +90,26 @@ class PlayActivity : AppCompatActivity() {
 
     fun onClick(view: View) {
         val generalQuestion = (view as Button).text.toString().toInt()
-        if (generalQuestion == res) {
-            if (score == countOfQuestion) {
+        if (generalQuestion == res)
+        { rightAnswer++
+            if (score == COUNT_OF_QUESTION) {
                 val winActivity = Intent(this, WinActivity::class.java)
                 startActivity(winActivity)
                 finish()
             } else {
-                plus()
                 score++
+                plus()
+                timer.start()
                 Level.text =("Level: $score").toString()
             }
         } else {
             val gameOver = Intent(this, GameOver::class.java)
+            gameOver.putExtra(RIGHT_ANSWERS_COUNT,rightAnswer)
             startActivity(gameOver)
             finish()
         }
     }
+
 }
 
 
