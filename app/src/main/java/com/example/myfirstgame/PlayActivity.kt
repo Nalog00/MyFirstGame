@@ -20,26 +20,7 @@ class PlayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
         plus()
-        timer.start()
     }
-    private val timer = object: CountDownTimer(15000,1000){
-        override fun onFinish() {
-            val gameOver = Intent(this@PlayActivity, GameOver::class.java)
-            gameOver.putExtra(RIGHT_ANSWERS_COUNT,rightAnswer)
-            startActivity(gameOver)
-            finish()
-        }
-        override fun onTick(mUF: Long) {
-       tvTimer.setText("" +mUF/1000).toString()
-        }
-
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        timer.cancel()
-    }
-
     fun plus() {
         val a = Random.nextInt(1, 99)
         val b = Random.nextInt(1, 99)
@@ -99,7 +80,6 @@ class PlayActivity : AppCompatActivity() {
             } else {
                 score++
                 plus()
-                timer.start()
                 Level.text =("Level: $score").toString()
             }
         } else {
