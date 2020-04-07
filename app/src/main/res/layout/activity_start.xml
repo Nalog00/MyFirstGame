@@ -25,7 +25,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:gravity="center"
         android:text="Timer: "
         android:textColor="#607d8c"
         android:textSize="24sp"
