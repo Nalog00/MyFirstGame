@@ -1,5 +1,4 @@
 package com.example.myfirstgame
-
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -10,7 +9,6 @@ import kotlinx.android.synthetic.main.activity_start.*
 import kotlin.random.Random
 
 class PlayActivity : AppCompatActivity() {
-    var countOfQuestion = 10
     var score = 1
     var res = 0
     var rightAnswer=0

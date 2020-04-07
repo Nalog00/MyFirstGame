@@ -41,6 +41,17 @@
         android:textSize="32sp"
         android:textColor="#efdcd5"/>
 
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGO"
+        android:layout_marginTop="24dp"
+        android:textSize="32sp"
+        android:textColor="#efdcd5"/>
+
     <Button
         android:id="@+id/resBtn"
         android:layout_width="200dp"
